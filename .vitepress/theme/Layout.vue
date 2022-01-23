@@ -41,7 +41,7 @@ footer {
 
 .no-scroll-page {
   width: 100%;
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
 }
