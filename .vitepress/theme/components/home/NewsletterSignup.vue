@@ -59,6 +59,7 @@ input[type='submit'] {
   padding: 0.875rem;
   background-color: var(--c-brand);
   color: var(--c-black);
+  transition: 0.3s;
 }
 
 input[type='submit']:hover {
