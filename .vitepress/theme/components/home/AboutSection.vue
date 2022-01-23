@@ -27,7 +27,10 @@
         </p>
         <p>
           Lastly - each post is
-          <a href="https://blog.maciejpedzi.ch/" rel="noreferrer noopener">
+          <a
+            href="https://weeklyovervue.hashnode.dev"
+            rel="noreferrer noopener"
+          >
             available on Hashnode
           </a>
           too, which means you <strong>won't</strong> have to worry about
