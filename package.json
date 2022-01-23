@@ -1,0 +1,22 @@
+{
+  "name": "weekly-overvue",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weekly-overvue/weeklyovervue.com.git"
+  },
+  "author": "Maciej Pędzich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weekly-overvue/weeklyovervue.com/issues"
+  },
+  "homepage": "https://github.com/weekly-overvue/weeklyovervue.com#readme",
+  "devDependencies": {
+    "vitepress": "^0.21.6"
+  }
+}

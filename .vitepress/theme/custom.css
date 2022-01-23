@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --c-bg: #35495e;
+  --c-brand: #42b883;
+  font-family: 'Cantarell', sans-serif;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  background-color: var(--c-bg) !important;
+  color: var(--c-white-dark) !important;
+}
+
+@media screen and (min-width: 720px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .sidebar {
+    width: 100% !important;
+    transition: transform 0.5s ease !important;
+  }
+}
+
+.nav-bar {
+  background-color: transparent !important;
+  border: transparent !important;
+}
+
+div.nav-link a.item {
+  color: var(--c-white) !important;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  transition: 0.3s;
+}
+
+.nav-link a.item:last-of-type {
+  margin-right: 0;
+}
+
+.nav-bar-title {
+  color: var(--c-white) !important;
+}
+
+.home-hero {
+  background: linear-gradient(120deg, #42b883, #35495e);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tagline {
+  color: var(--c-white-dark) !important;
+}
+
+#main-title {
+  margin-bottom: 1rem;
+}
+
+header.home-hero,
+#main-title {
+  margin-top: 0 !important;
+}
+
+main.home {
+  padding-top: 0 !important;
+}
+
+div.home-content {
+  padding: 0 !important;
+}
+
+.home-section {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
