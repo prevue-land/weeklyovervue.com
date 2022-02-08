@@ -1,5 +1,5 @@
 ---
-title: Create a simple CodePen clone using vue3-ace-editor and splitpanes
+title: Ace Editor & Splitpanes CodePen clone
 slug: ace-editor-codepen-clone
 custom-slug: ace-editor-codepen-clone
 date: 2022-02-06T17:24:10.238Z
