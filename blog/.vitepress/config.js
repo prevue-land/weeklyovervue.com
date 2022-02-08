@@ -27,7 +27,6 @@ export default defineConfig({
   title: 'Weekly OverVue',
   description:
     'Showcasing community Vue & Nuxt components in action every Sunday',
-
   themeConfig: {
     nav: navigationLinks
   }

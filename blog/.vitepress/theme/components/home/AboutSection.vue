@@ -2,7 +2,7 @@
   <section>
     <h1>About</h1>
     <div id="avatar-and-desc">
-      <img id="avatar" src="/mac.png" alt="Image of Mac" />
+      <img id="avatar" src="/images/mac.png" alt="Image of Mac" />
       <div id="desc">
         <p>
           Hey! My name is Maciej Pędzich, but you can call me
