@@ -2,6 +2,10 @@ import { defineConfig } from 'vitepress';
 
 const navigationLinks = [
   {
+    text: 'All articles',
+    link: '/articles'
+  },
+  {
     text: 'Contact',
     link: '/contact'
   },
@@ -23,8 +27,8 @@ export default defineConfig({
   title: 'Weekly OverVue',
   description:
     'Showcasing community Vue & Nuxt components in action every Sunday',
+
   themeConfig: {
-    // sidebar: true,
     nav: navigationLinks
   }
 });

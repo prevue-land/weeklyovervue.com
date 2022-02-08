@@ -7,9 +7,6 @@ const { frontmatter, theme } = useData();
 const { Layout } = DefaultTheme;
 
 const currentYear = new Date().getFullYear();
-const noScrollPage = computed(
-  () => !frontmatter.value.title || frontmatter.value.title === 'Contact'
-);
 </script>
 
 <template>
@@ -18,8 +15,8 @@ const noScrollPage = computed(
     <TheLatestArticles />
     <NewsletterSignup />
   </template>
-  <footer :class="{ 'no-scroll-page': noScrollPage }">
-    &copy; {{ currentYear }} Maciej Pędzich. Powered by
+  <footer>
+    &copy; {{ currentYear }} Weekly OverVue. Powered by
     <a
       id="vitepress-link"
       href="https://vitepress.vuejs.org/"
@@ -37,13 +34,6 @@ footer {
   color: var(--c-black);
   padding: 1rem;
   text-align: center;
-}
-
-.no-scroll-page {
-  width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
 }
 
 #vitepress-link {
