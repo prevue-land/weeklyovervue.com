@@ -89,7 +89,7 @@ Although we’re done with the skeleton (for now), we’re yet to properly style
 
 There’s nothing particularly interesting going on here, so let’s just make sure to save these changes and type in `npm run dev` in the CLI. If you've done everything correctly, you'll be greeted with a dev server URL. Upon opening the page in your web browser, you should see something like this:
 
-![Untitled.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1644170975483/U8jHG4ISUt.png)
+![Initial panels implementation](https://cdn.hashnode.com/res/hashnode/image/upload/v1644170975483/U8jHG4ISUt.png)
 
 Now hover over one of these lines and hold your left mouse button. If it’s a vertical line, move your mouse to the left/right (or up/down for a horizontal line). That was pretty simple to implement and equally easy to use, wasn’t it?
 
@@ -459,7 +459,7 @@ import EditorPaneContent from './components/EditorPaneContent.vue';
 
 Save your changes to be graced with blazingly fast Vite dev server’s hot reload, as well as this view in the web browser:
 
-![Final Editor Panels Screenshot](https://cdn.hashnode.com/res/hashnode/image/upload/v1644171001147/cz_Vn7Oh2.png)
+![Final editor panels layout](https://cdn.hashnode.com/res/hashnode/image/upload/v1644171001147/cz_Vn7Oh2.png)
 
 ## Implementing *results* panel
 
@@ -538,7 +538,7 @@ import ResultsPaneContent from './components/ResultsPaneContent.vue';
 
 Make sure to save your changes... *et voila:*
 
-![Editor and Results Panels Screenshot](https://cdn.hashnode.com/res/hashnode/image/upload/v1644171020383/mCBgPW4O6.png)
+![Editor and results panels together](https://cdn.hashnode.com/res/hashnode/image/upload/v1644171020383/mCBgPW4O6.png)
 
 # 🎉 YOU’VE FINISHED THIS TUTORIAL 🎉
 
