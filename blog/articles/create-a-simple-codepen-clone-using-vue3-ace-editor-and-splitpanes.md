@@ -2,6 +2,8 @@
 title: Ace Editor & Splitpanes CodePen clone
 slug: ace-editor-codepen-clone
 custom-slug: ace-editor-codepen-clone
+description: Learn how to build a minimalist, no-backend CodePen clone using
+  vue3-ace-editor and splitpanes
 date: 2022-02-06T17:24:10.238Z
 cover: /blog/public/01-cover.jpg
 ---
@@ -17,7 +19,7 @@ CodePen allows one to write HTML, CSS, and JavaScript code, and also preview its
 
 Here’s a typical *Pen* view:
 
-![codepen.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1644170885657/hl_jUgDfs.png)
+![Typical Pen view screenshot](https://cdn.hashnode.com/res/hashnode/image/upload/v1644170885657/hl_jUgDfs.png)
 
 It consists of two *main* horizontal panels for code editors and the resulting webpage, with the former split into three vertical subpanels. By default, each panel takes up an equal amount of available container space, but it can be freely adjusted and resized to one’s liking. Obviously, there are alternative layouts too, but in this article I’m going to focus on the one I’ve just described.
 
@@ -155,9 +157,9 @@ Then we’ve got to write our getters: `resultingDocument` and `isEmptyDocument`
 
 ```typescript
 {
-	// Remember: this is the exact same object as in snippet above
+  // Remember: this is the exact same object as in snippet above
   // I omitted state to make this chunk more "digestible"
-	getters: {
+  getters: {
     resultingDocument() {
       return `
       <!DOCTYPE html>
@@ -191,7 +193,7 @@ And last but not least - actions
 ```typescript
 {
 	// Just like above
-	actions: {
+  actions: {
     setHtml(html: string) {
       this.html = html;
     },
