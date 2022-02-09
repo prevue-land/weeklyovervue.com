@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.c7fc8474.js";const _='{"title":"","description":"","frontmatter":{"article-fields":["Ace Editor & Splitpanes CodePen clone"]},"headers":[],"relativePath":"articles.md","lastUpdated":1644401063994}',r={};function c(s,o,n,i,p,d){return a(),t("div")}var f=e(r,[["render",c]]);export{_ as __pageData,f as default};
