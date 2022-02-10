@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vitepress dev blog",
     "build": "vitepress build blog",
-    "serve": "vitepress serve blog"
+    "serve": "vitepress serve blog",
+    "gen-articles-json": "node ./blog/.vitepress/scripts/generateArticlesJson.js"
   },
   "repository": {
     "type": "git",
