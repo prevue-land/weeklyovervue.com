@@ -1,4 +1,5 @@
 ---
+type: article
 title: Ace Editor & Splitpanes CodePen clone
 slug: ace-editor-codepen-clone
 custom-slug: ace-editor-codepen-clone
