@@ -7,10 +7,24 @@ const { frontmatter, theme } = useData();
 const { Layout } = DefaultTheme;
 
 const currentYear = new Date().getFullYear();
+const articleDisplayDate = computed(() =>
+  new Date(frontmatter.value.date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+);
 </script>
 
 <template>
-  <Layout></Layout>
+  <Layout>
+    <template #page-top>
+      <section id="article-start" v-if="frontmatter.type === 'article'">
+        <h1>{{ frontmatter.title }}</h1>
+        <p>&#128197; {{ articleDisplayDate }}</p>
+      </section>
+    </template>
+  </Layout>
   <template v-if="frontmatter.home">
     <TheLatestArticles />
     <NewsletterSignup />
@@ -19,7 +33,7 @@ const currentYear = new Date().getFullYear();
     &copy; {{ currentYear }} Weekly OverVue. Powered by
     <a
       id="vitepress-link"
-      href="https://vitepress.vuejs.org/"
+      href="https://vitepress.vuejs.org"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -33,6 +47,10 @@ footer {
   background-color: var(--c-brand);
   color: var(--c-black);
   padding: 1rem;
+}
+
+footer,
+#article-start {
   text-align: center;
 }
 
