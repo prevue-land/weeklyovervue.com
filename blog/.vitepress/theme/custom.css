@@ -94,3 +94,35 @@ div.home-content {
   padding: 2rem;
   text-align: center;
 }
+
+main.page {
+  margin-left: 0 !important;
+}
+
+.container {
+  padding-bottom: 1rem !important;
+}
+
+.container > .content {
+  padding-bottom: 0 !important;
+}
+
+ul.sidebar-links {
+  display: none;
+}
+
+code {
+  color: var(--c-text-lighter);
+  background-color: var(--code-bg-color);
+}
+
+blockquote > p {
+  color: var(--c-text-lighter);
+  font-style: italic;
+}
+
+.articles-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
