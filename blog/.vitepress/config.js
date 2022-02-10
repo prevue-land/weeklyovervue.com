@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 const navigationLinks = [
   {
-    text: 'All articles',
+    text: 'Articles',
     link: '/articles'
   },
   {
