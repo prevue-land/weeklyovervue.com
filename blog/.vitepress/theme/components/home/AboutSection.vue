@@ -68,7 +68,7 @@ h1 {
 }
 
 #avatar {
-  max-width: 230px;
+  max-width: 253px;
   height: auto;
   border-radius: 50%;
 }
