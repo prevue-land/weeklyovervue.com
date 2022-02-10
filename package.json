@@ -20,6 +20,7 @@
     "vitepress": "^0.21.6"
   },
   "dependencies": {
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "front-matter": "^4.0.2"
   }
 }
