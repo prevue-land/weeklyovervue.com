@@ -100,7 +100,8 @@ main.page {
 }
 
 .container {
-  padding-bottom: 1rem !important;
+  margin: 0 !important;
+  max-width: unset !important;
 }
 
 .container > .content {
@@ -125,4 +126,5 @@ blockquote > p {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-items: center;
 }

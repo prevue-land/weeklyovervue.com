@@ -8,7 +8,7 @@ import articles from './articles.json';
 </script>
 
 <h1>Articles</h1>
-<div id="temp-center">
+<div class="articles-grid">
   <ArticleCard
     v-for="article in articles"
     :key="article.id"
@@ -20,11 +20,6 @@ import articles from './articles.json';
 h1 {
   margin-bottom: 1.5rem;
   text-align: center;
-}
-
-#temp-center {
-  display: flex;
-  justify-content: center;
 }
 
 .article-container {
