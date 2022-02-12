@@ -8,9 +8,7 @@ const data = articles.slice(0, 3);
   <section id="the-latest-articles" class="home-section">
     <h1>The latest articles</h1>
     <div class="articles-grid">
-      <div></div>
       <ArticleCard v-for="article in data" :key="article.id" v-bind="article" />
-      <div></div>
     </div>
   </section>
 </template>
