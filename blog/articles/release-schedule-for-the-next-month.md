@@ -16,4 +16,4 @@ Hello and welcome to a slightly different post than you'll typically find here a
 3. *Survey Builder* - I'm confident this name speaks for itself; it will make use of [FormKit](https://formkit.com/) not only for previewing a questionnaire, but also generating it! Coming **March 6**
 4. *Tic Tac Toe* - another project that needs no introduction; built using [vue3-boardgame](https://github.com/SaFrMo/vue3-boardgame/) plugin. Coming **March 13**
 
-Thank you so much for reading in and see you in the next one. Take care!
+Thank you so much for reading in and remember - **Mac believes in you!**
