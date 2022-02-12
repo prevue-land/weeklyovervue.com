@@ -4,10 +4,18 @@
         <title>Weekly OverVue RSS Feed</title>
         <link>https://weeklyovervue.com/articles</link>
         <description>RSS feed for the latest Weekly OverVue articles</description>
-        <lastBuildDate>Sat, 12 Feb 2022 19:58:40 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Feb 2022 19:59:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>2022 Weekly OverVue</copyright>
+        <item>
+            <title><![CDATA[Release schedule for the next month]]></title>
+            <link>https://weeklyovervue.com/articles/release-schedule-for-the-next-month.html</link>
+            <guid>release-schedule-for-the-next-month</guid>
+            <pubDate>Sat, 12 Feb 2022 19:00:00 GMT</pubDate>
+            <description><![CDATA[Find out what articles will be published throughout the course of next month]]></description>
+            <enclosure url="https://weeklyovervue.com/images/towfiqu-barbhuiya-bwoaixlg0uc-unsplash.jpg" length="0" type="image/jpg"/>
+        </item>
         <item>
             <title><![CDATA[Ace Editor & Splitpanes CodePen clone]]></title>
             <link>https://weeklyovervue.com/articles/create-a-simple-codepen-clone-using-vue3-ace-editor-and-splitpanes.html</link>
