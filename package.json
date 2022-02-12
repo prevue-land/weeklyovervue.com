@@ -5,7 +5,8 @@
     "dev": "vitepress dev blog",
     "build": "vitepress build blog",
     "serve": "vitepress serve blog",
-    "gen-articles-json": "node ./blog/.vitepress/scripts/generateArticlesJson.js"
+    "gen-articles-json": "node ./blog/.vitepress/scripts/generateArticlesJson.js",
+    "gen-rss-feed": "node ./blog/.vitepress/scripts/generateRssFeed.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.0",
+    "feed": "^4.2.2",
     "front-matter": "^4.0.2"
   }
 }

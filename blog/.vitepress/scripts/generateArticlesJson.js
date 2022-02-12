@@ -20,6 +20,7 @@ for (const file of articleFiles) {
   const link = `/articles/${slug}.html`;
 
   data.push({
+    id: slug,
     title,
     description,
     link,
