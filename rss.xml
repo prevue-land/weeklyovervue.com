@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Weekly OverVue RSS Feed</title>
+        <link>https://weeklyovervue.com/articles</link>
+        <description>RSS feed for the latest Weekly OverVue articles</description>
+        <lastBuildDate>Sat, 12 Feb 2022 17:25:40 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>2022 Weekly OverVue</copyright>
+        <item>
+            <title><![CDATA[Ace Editor & Splitpanes CodePen clone]]></title>
+            <link>https://weeklyovervue.com/articles/create-a-simple-codepen-clone-using-vue3-ace-editor-and-splitpanes.html</link>
+            <guid>create-a-simple-codepen-clone-using-vue3-ace-editor-and-splitpanes</guid>
+            <pubDate>Sun, 06 Feb 2022 17:24:10 GMT</pubDate>
+            <description><![CDATA[Learn how to build a minimalist, no-backend CodePen clone using vue3-ace-editor and splitpanes]]></description>
+            <enclosure url="https://weeklyovervue.com/images/01-cover.jpg" length="0" type="image/jpg"/>
+        </item>
+    </channel>
+</rss>
