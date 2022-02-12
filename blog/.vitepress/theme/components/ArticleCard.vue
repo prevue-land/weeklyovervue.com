@@ -1,5 +1,6 @@
 <script setup>
 const props = defineProps({
+  id: String,
   title: String,
   date: Number,
   description: String,

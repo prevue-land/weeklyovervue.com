@@ -11,7 +11,7 @@ import articles from './articles.json';
 <div id="temp-center">
   <ArticleCard
     v-for="article in articles"
-    :key="article.title"
+    :key="article.id"
     v-bind="article"
   />
 </div>
