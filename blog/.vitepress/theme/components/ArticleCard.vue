@@ -36,19 +36,28 @@ h3 {
 a {
   color: inherit;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
 }
 
 img {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
 }
 
 article {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   color: var(--c-black);
   text-align: center;
   border-radius: 0.75rem;
   transition: 0.5s;
+  width: 100%;
+  height: 100%;
 }
 
 article:hover {
@@ -57,6 +66,11 @@ article:hover {
 }
 
 .content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   padding: 1rem;
 }
 </style>
