@@ -4,18 +4,10 @@
         <title>Weekly OverVue RSS Feed</title>
         <link>https://weeklyovervue.com/articles</link>
         <description>RSS feed for the latest Weekly OverVue articles</description>
-        <lastBuildDate>Sat, 12 Feb 2022 19:50:01 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Feb 2022 19:58:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>2022 Weekly OverVue</copyright>
-        <item>
-            <title><![CDATA[Operation "Netlify CMS" complete]]></title>
-            <link>https://weeklyovervue.com/articles/operation-netlify-cms-complete.html</link>
-            <guid>operation-netlify-cms-complete</guid>
-            <pubDate>Sat, 12 Feb 2022 19:38:00 GMT</pubDate>
-            <description><![CDATA[About the Netlify CMS migration from Notion]]></description>
-            <enclosure url="https://weeklyovervue.com/images/mustachescactus-ulureqdw5g-unsplash.jpg" length="0" type="image/jpg"/>
-        </item>
         <item>
             <title><![CDATA[Ace Editor & Splitpanes CodePen clone]]></title>
             <link>https://weeklyovervue.com/articles/create-a-simple-codepen-clone-using-vue3-ace-editor-and-splitpanes.html</link>
