@@ -11,9 +11,9 @@ Hello and welcome to a slightly different post than you'll typically find here a
 
 **Disclaimer:** Knowing Mac (and his luck when he needs it most), both the article publishing dates as well as their topics themselves **are subject to change**. With that out of the way, here are **four** upcoming Weekly OverVue articles in their (provisional) release order:
 
-1. *Jewelry Store -* online jewelry store demo built using [Maya Shavin](https://mayashavin.com/)'s *Vurian* wizard component and XState. Coming **20 February**
-2. *News Highlights* - Nuxt 3 "latest news in a nutshell" application utilising [Flicking](https://naver.github.io/egjs-flicking/) carousel component and Mac's very own RSS Feed generation module. Coming **27 February**
-3. *Survey Builder* - I'm confident this name speaks for itself; it will make use of [FormKit](https://formkit.com/) not only for previewing a questionnaire, but also generating it! Coming **6 March**
-4. *Tic Tac Toe* - another project that needs no introduction; built using [vue3-boardgame](https://github.com/SaFrMo/vue3-boardgame/) plugin. Coming **13 March**
+1. *Jewelry Store -* online jewelry store demo built using [Maya Shavin](https://mayashavin.com/)'s *Vurian* wizard component and XState. Coming **February 20**
+2. *News Highlights* - Nuxt 3 "latest news in a nutshell" application utilising [Flicking](https://naver.github.io/egjs-flicking/) carousel component and Mac's very own RSS Feed generation module. Coming **February 27**
+3. *Survey Builder* - I'm confident this name speaks for itself; it will make use of [FormKit](https://formkit.com/) not only for previewing a questionnaire, but also generating it! Coming **March 6**
+4. *Tic Tac Toe* - another project that needs no introduction; built using [vue3-boardgame](https://github.com/SaFrMo/vue3-boardgame/) plugin. Coming **March 13**
 
 Thank you so much for reading in and see you in the next one. Take care!
