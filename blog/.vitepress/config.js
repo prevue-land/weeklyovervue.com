@@ -6,6 +6,10 @@ const navigationLinks = [
     link: '/articles'
   },
   {
+    text: 'RSS Feed',
+    link: '/rss.xml'
+  },
+  {
     text: 'Contact',
     link: '/contact'
   },
