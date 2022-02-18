@@ -19,3 +19,17 @@ $ cd tic-tac-toe
 $ npm install
 $ npm uninstall --save pinia
 ```
+
+Once that's done, open up your favourite code editor and go to the `main.ts` file in `src` directory. Go ahead and remove these lines:
+
+```typescript
+// ...
+import { createPinia } from 'pinia';
+
+// ...
+
+app.use(createPinia());
+
+```
+
+Then move over to `App.vue` file in that same folder. Remove the entire `<header>` element inside the `<template>`, as well as the `nav` element styling rule down in the `<style>` tag.
