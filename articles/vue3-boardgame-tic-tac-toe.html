@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>vue3-boardgame Tic Tac Toe | Weekly OverVue</title>
     <meta name="description" content="Build a classic Tic Tac Toe game using boardgame.io plugin for Vue 3">
-    <link rel="stylesheet" href="/assets/style.43b168b2.css">
+    <link rel="stylesheet" href="/assets/style.1007963c.css">
     <link rel="modulepreload" href="/assets/Home.dfe317cd.js">
     <link rel="modulepreload" href="/assets/app.0102bd72.js">
-    <link rel="modulepreload" href="/assets/articles_vue3-boardgame-tic-tac-toe.md.52701ad4.lean.js">
+    <link rel="modulepreload" href="/assets/articles_vue3-boardgame-tic-tac-toe.md.b5f36e46.lean.js">
     
     <meta name="twitter:title" content="vue3-boardgame Tic Tac Toe | Weekly OverVue">
   <meta property="og:title" content="vue3-boardgame Tic Tac Toe | Weekly OverVue">
@@ -18,8 +18,15 @@
 $ <span class="token builtin class-name">cd</span> tic-tac-toe
 $ <span class="token function">npm</span> <span class="token function">install</span>
 $ <span class="token function">npm</span> uninstall --save pinia
-</code></pre></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--><!----><footer data-v-5b4f69c6> © 2022 Weekly OverVue. Powered by <a id="vitepress-link" href="https://vitepress.vuejs.org" target="_blank" rel="noopener noreferrer" data-v-5b4f69c6> Vitepress </a></footer><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"articles.md\":\"559e3d3b\",\"articles_create-a-simple-codepen-clone-using-vue3-ace-editor-and-splitpanes.md\":\"cea04430\",\"articles_operation-netlify-cms-complete.md\":\"b3e1ce58\",\"articles_release-schedule-for-the-next-month.md\":\"69c00b0c\",\"articles_vue3-boardgame-tic-tac-toe.md\":\"52701ad4\",\"contact.md\":\"ae336fa9\",\"index.md\":\"0f90c948\"}")</script>
+</code></pre></div><p>Once that&#39;s done, open up your favourite code editor and go to the <code>main.ts</code> file in <code>src</code> directory. Go ahead and remove these lines:</p><div class="language-typescript"><pre><code><span class="token comment">// ...</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> createPinia <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;pinia&#39;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ...</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">createPinia</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>Then move over to <code>App.vue</code> file in that same folder. Remove the entire <code>&lt;header&gt;</code> element inside the <code>&lt;template&gt;</code>, as well as the <code>nav</code> element styling rule down in the <code>&lt;style&gt;</code> tag.</p></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--><!----><footer data-v-5b4f69c6> © 2022 Weekly OverVue. Powered by <a id="vitepress-link" href="https://vitepress.vuejs.org" target="_blank" rel="noopener noreferrer" data-v-5b4f69c6> Vitepress </a></footer><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"articles.md\":\"7587000c\",\"articles_create-a-simple-codepen-clone-using-vue3-ace-editor-and-splitpanes.md\":\"b37232fc\",\"articles_operation-netlify-cms-complete.md\":\"14568751\",\"articles_release-schedule-for-the-next-month.md\":\"aa71e554\",\"articles_vue3-boardgame-tic-tac-toe.md\":\"b5f36e46\",\"contact.md\":\"769d133d\",\"index.md\":\"3880d1fd\"}")</script>
     <script type="module" async src="/assets/app.0102bd72.js"></script>
     
   </body>
