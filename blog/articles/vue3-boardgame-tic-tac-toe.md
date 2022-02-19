@@ -11,7 +11,7 @@ Hello and welcome back to Weekly OverVue! My name is Mac, and this week I'll sho
 
 ## Project configuration
 
-Now, begin by cloning the *Blank Canvas* template into a `tic-tac-toe` folder (feel free to choose any other name if you want) and installing all the dependencies, while also removing Pinia:
+Begin by cloning the *Blank Canvas* template into a `tic-tac-toe` folder (feel free to choose any other name if you want) and installing all the dependencies, while also removing Pinia:
 
 ```shell
 $ git clone https://github.com/weekly-overvue/blank-canvas.git tic-tac-toe
@@ -29,7 +29,6 @@ import { createPinia } from 'pinia';
 // ...
 
 app.use(createPinia());
-
 ```
 
-Then move over to `App.vue` file in that same folder. Remove the entire `<header>` element inside the `<template>`, as well as the `nav` element styling rule down in the `<style>` tag.
+Then move over to `App.vue` file in that same folder. Remove the entire `<header>` element inside the `<template>`, as well as the `nav` element styling rule down in the `<style>` tag. Now add `main` element
