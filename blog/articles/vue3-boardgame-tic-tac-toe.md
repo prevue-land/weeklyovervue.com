@@ -31,4 +31,27 @@ import { createPinia } from 'pinia';
 app.use(createPinia());
 ```
 
-Then move over to `App.vue` file in that same folder. Remove the entire `<header>` element inside the `<template>`, as well as the `nav` element styling rule down in the `<style>` tag. Now add `main` element
+Then move over to `App.vue` file in that same folder. Remove the entire `<header>` element inside the `<template>`, as well as the `nav` element styling rule down in the `<style>` tag. Now add `main` element to the `width: 100%; height: 100%` rule, and also `justify-content: center;` to the separate `main` styling rule. And last but not least, let's reset each `h1` tag's top margin for a good measure. That's quite a description, so let me visualise all the changes for you:
+
+```css
+html,
+body,
+#app,
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ... */
+
+h1 {
+  margin-top: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+```
