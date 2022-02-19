@@ -18,7 +18,11 @@ const displayDate = new Date(props.date).toLocaleDateString('en-US', {
 <template>
   <a class="article-container" :href="props.link">
     <article>
-      <img :src="props.cover" :alt="`Cover image of ${props.title}`" />
+      <img
+        :src="props.cover"
+        :alt="`Cover image of ${props.title}`"
+        loading="lazy"
+      />
       <div class="content">
         <h3>{{ props.title }}</h3>
         <p>{{ props.description }}</p>
