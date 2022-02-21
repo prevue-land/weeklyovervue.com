@@ -57,3 +57,5 @@ main {
 ```
 
 That's it for our little *demolition job*. From here on, it's all about building upon and working with the foundation we've got.
+
+## Preparing the boardgame.io client
