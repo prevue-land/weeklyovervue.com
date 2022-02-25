@@ -134,4 +134,27 @@ export const client = Client<State, CustomCtx>({ game });
 export type BoardgameIoClient = typeof client;
 ```
 
-One thing I believe should be pointed out, is that boardgame.io doesn't actually provide any *public* type annotations for a client instance. Fortunately, we can make amends for it by creating a custom type set to `typeof client`, which I believe is rather self-explanatory.
+One thing I believe should be pointed out, is that boardgame.io doesn't actually provide any *public* type annotations for a client instance. Fortunately, we can make amends for it by creating a custom type set to `typeof client`, which I believe is rather self-explanatory. I also reckon it's best for it to be placed separately from all the other types, because in that case I would have to import `client.ts` over at `types/index.ts`, and I find this kind of mutual dependency a bit awkward.
+
+Alright, now that we've tackled the initial client setup, let's register the boardgame.io Vue 3 plugin. Open the `main.ts` file your src folder and modify it like so:
+
+```typescript
+import { createApp } from 'vue';
+import { boardgamePlugin } from 'vue3-boardgame';
+
+import App from './App.vue';
+import router from './router';
+import { client } from './client';
+
+const app = createApp(App);
+
+app.use(boardgamePlugin, {
+  useProvide: true,
+  useMixin: false,
+  autostart: false,
+  client
+});
+app.use(router);
+
+app.mount('#app');
+```
