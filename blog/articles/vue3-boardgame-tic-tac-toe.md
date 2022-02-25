@@ -2,7 +2,7 @@
 type: article
 title: vue3-boardgame Tic Tac Toe
 description: Build a classic Tic Tac Toe game using boardgame.io plugin for Vue 3
-date: 2022-02-20 20:00
+date: 2022-02-27 20:00
 cover: /blog/public/tic-tac-toe-gf7da00999_1280.jpg
 ---
 *Photo by pixel2013 on [Pixabay](https://pixabay.com/images/id-1777859/)*
@@ -66,3 +66,58 @@ With that out of the way, let's take a moment to actually familiarise ourselves 
 
 * **State** represents a *game-specific* data object, which is designed and managed by none other than **you** yourself. In other words, it's pretty much the same as your average Pinia store's state
 * **Moves** are essentially functions responsible for altering the aforementioned game state. They can be compared to Vuex mutations, as they manipulate the state directly and **without** causing any side-effects.
+* **Context** (`ctx`) provides read-only game metadata such as current turn's, phase's, or player's ID, total number of players, etc. Boardgame.io is responsible for managing it, with us being solely the *consumers* of all that data.
+
+It's high time we got down to the practical part by creating type definitions for our boardgame.io client. Create a `types` folder with an `index.ts` file inside. Let's begin with our state:
+
+```typescript
+export type Player = '0' | '1';
+
+export type PossibleCellValue = Player | null;
+
+export type State = {
+  cells: PossibleCellValue[];
+};
+```
+
+There's nothing worth explaining here, so let's move on to the context and moves:
+
+```typescript
+import type { Ctx, Move } from 'boardgame.io';
+
+// under the state type definitions...
+
+export type GameOver = { winner: Player | 'draw' };
+
+export type CustomCtx = Omit<Ctx, 'currentPlayer' | 'gameover'> & {
+  currentPlayer: Player;
+  gameover?: GameOver;
+};
+
+export type Moves = { markCell: Move<State, CustomCtx> };
+```
+
+For our Tic Tac Toe game's **state** we'll only need a simple array of 9 cells, since the original makes use of a 3x3 square board. As for the **moves**, each player needs to be able to mark such cell, unless it's already been taken. This was the spec, here's its code equivalent:
+
+```typescript
+import { Client } from 'boardgame.io/client';
+import { INVALID_MOVE } from 'boardgame.io/core';
+
+const setup = () => ({
+  cells: new Array(9).fill(null)
+});
+
+const moves = {
+  markCell(G, ctx, index: number) {
+    if (G.cells[index] !== null) {
+      return INVALID_MOVE;
+    }
+
+    G.cells[index] = ctx.currentPlayer;
+  }
+};
+
+const game = { setup, moves };
+
+export const client = Client({ game });
+```
