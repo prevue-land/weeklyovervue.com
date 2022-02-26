@@ -158,3 +158,65 @@ app.use(router);
 
 app.mount('#app');
 ```
+
+By default, the vue3-boardgame plugin makes use of mixins instead of the provide/inject mechanism. Since this tutorial aims to showcase SFCs utilising the Composition API rather than the Options counterpart, we have to change this behaviour. I've also opted to manually start the client in a dedicated *Game* view we'll code in a minute. But before that, let's design a simple menu in the *Home* view.
+
+## Creating a borderline basic main menu, because why not
+
+First of all, let's write a simple, reusable `BlockButton.vue` component in the `components` directory (create one in the `src` folder if it doesn't exist). Go ahead and paste in this code block for the file:
+
+```html
+<template>
+  <button class="block-button">
+    <slot></slot>
+  </button>
+</template>
+
+<style scoped>
+.block-button {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: #35495e;
+  color: white;
+  border: none;
+  text-align: center;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #42b883;
+  color: #000;
+  outline: none;
+}
+</style>
+```
+
+Then head over to `HomeView.vue` file in the `views` folder and remove the *Have fun!* message (but keep it in mind yo!). Before you add any markup, add this little script tag above the `<template>` to import both the newly created `BlockButton` and `RouterLink` components. Once that's done, create a div with a title `<h1>` tag and buttons wrapped in router links inside, just like so:
+
+```html
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+import BlockButton from '@/components/BlockButton.vue';
+</script>
+
+<template>
+  <div>
+    <h1>vue3-boardgame Tic Tac Toe</h1>
+    <RouterLink to="/game">
+      <BlockButton>PLAY!</BlockButton>
+    </RouterLink>
+    <RouterLink to="/about">
+      <BlockButton>About</BlockButton>
+    </RouterLink>
+  </div>
+</template>
+```
+
+Make sure to save your changes and use `npm run dev` command in your CLI. You should be greeted with a dev server URL, and upon opening the page in your web browser, you should be able to see this:
+
+![Tic Tac Toe game's main menu screenshot](/blog/public/tic-tac-toe-menu.png)
+
+## Coding up a Tic Tac Toe Board component
+
+Right now, if you click the *PLAY!* button, you'll be taken to a blank page. This is because we're yet to register a `/game` route in our application. Even worse, we don't even have a dedicated view for it - let's fix that. But before we get down to writing the actual view, we'll need two things: a helper function to return an HTML entity based on given player character, as well as the aforementioned board component.
