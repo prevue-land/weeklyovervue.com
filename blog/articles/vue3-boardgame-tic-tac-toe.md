@@ -159,7 +159,7 @@ app.use(router);
 app.mount('#app');
 ```
 
-By default, the vue3-boardgame plugin makes use of mixins instead of the provide/inject mechanism. Since this tutorial aims to showcase SFCs utilising the Composition API rather than the Options counterpart, we have to change this behaviour. I've also opted to manually start the client in a dedicated *Game* view we'll code in a minute. But before that, let's design a simple menu in the *Home* view.
+By default, the vue3-boardgame plugin makes use of mixins instead of the providing reactive refs of the baordgame.io objects I've mentioned. Since this tutorial aims to showcase SFCs utilising the Composition API rather than the Options counterpart, we have to change this behaviour. I've also opted to manually start the client in a dedicated *Game* view we'll code in a minute. But before that, let's design a simple menu in the *Home* view.
 
 ## Creating a borderline basic main menu, because why not
 
@@ -220,3 +220,51 @@ Make sure to save your changes and use `npm run dev` command in your CLI. You sh
 ## Coding up a Tic Tac Toe Board component
 
 Right now, if you click the *PLAY!* button, you'll be taken to a blank page. This is because we're yet to register a `/game` route in our application. Even worse, we don't even have a dedicated view for it - let's fix that. But before we get down to writing the actual view, we'll need two things: a helper function to return an HTML entity based on given player character, as well as the aforementioned board component.
+
+Ok then, create a `utils` directory and a `playerHtmlEntity.ts` file inside. Here we'll want to export a function which takes a single argument of the `PossibleCellValue` type and returns an empty string for `null`, circle HTML entity for `'0'`, and finally a cross entity for `'1'`. Here's how we can turn this spec into code:
+
+```typescript
+import { PossibleCellValue } from '@/types';
+
+export function playerHtmlEntity(character: PossibleCellValue) {
+  const entityMap = {
+    '0': '&#9711;', // circle
+    '1': '&#10005;' // cross
+  };
+
+  return character === null ? '' : entityMap[character];
+}
+```
+
+That was rather straightforward, so it's time to take care of the game board component. As you probably know, it's comprised of 3 rows and 3 columns of square cells, and it's usually drawn without the outer border like in this article's cover image for example.
+
+We should create said board by looping through the `cells` array from our game's state (`G`). If a cell is unmarked  and it's clicked, it should *mark itself* with current player's character by calling the `markCell` move with the cell's index. You know the drill:
+
+```html
+<script setup lang="ts">
+import { inject, Ref } from 'vue';
+
+import { BoardgameIoClient } from '@/client';
+import { State } from '@/types';
+import { playerHtmlEntity } from '@/utils/playerHtmlEntity';
+
+const client = inject<Ref<BoardgameIoClient>>('client');
+const G = inject<Ref<State>>('G');
+</script>
+
+<template>
+  <div>
+    <div
+      v-for="(cell, index) in G?.cells"
+      :key="index"
+      v-html="playerHtmlEntity(cell)"
+      @click="client?.moves.markCell(index)"
+    ></div>
+  </div>
+</template>
+
+```
+
+There are two things I'd like to explain before we move on to styling. First one is the fact that Vue *appends* undefined type to each one passed via `inject`, therefore we'll always be forced to use optional chaining when accessing injected refs' properties.
+
+The second one is the use of built-in `v-html` directive, instead of the good ol' mustache syntax. If we were to make use of the latter, each HTML entity string returned by our utility would be displayed *as-is* instead of getting *converted* to a proper Unicode character. Furthermore, utilising `v-html` in this scenario is totally safe, because it's impossible for the user to set a custom cell value, and even if it was, the `playerHtmlEntity` would simply return `undefined` due to such value not being a key of `entityMap`.
