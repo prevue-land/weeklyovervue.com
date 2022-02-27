@@ -262,11 +262,29 @@ const G = inject<Ref<State>>('G');
     ></div>
   </div>
 </template>
-
 ```
 
 There are two things I'd like to explain before we move on to styling. First one is the fact that Vue *appends* undefined type to each one passed via `inject`, therefore we'll always be forced to use optional chaining when accessing injected refs' properties.
 
 The second one is the use of built-in `v-html` directive, instead of the good ol' mustache syntax. If we were to make use of the latter, each HTML entity string returned by our utility would be displayed *as-is* instead of getting *converted* to a proper Unicode character. Furthermore, utilising `v-html` in this scenario is totally safe, because it's impossible for the user to set a custom cell value, and even if it was, the `playerHtmlEntity` would simply return `undefined` due to such value not being a key of `entityMap`.
 
-# ADD STYLING SECTION HERE
+We're yet to properly style the game board. Add `id="tic-tac-toe-board"` to the root div and put a `<style scoped>` tag below the `<template>`, starting with this simple rule:
+
+```css
+#tic-tac-toe-board {
+  display: grid;
+  overflow: hidden;
+}
+```
+
+Tic Tac Toe board is a prime example of an ordered layout, so using CSS Grid is a no-brainer here. What could be less obvious though, is setting `overflow: hidden;`, but it will make more sense in a minute, trust me ;). Before that, we'll need to come back to our `<template>` in order to assign our cell divs, `cell` classes, but also a dynamic `unmarked` class, which I'm positive speaks for itself too. We can combine the array and object class syntax to achieve this:
+
+```html
+<div
+  v-for="(cell, index) in G?.cells"
+  :key="index"
+  :class="['cell', { unmarked: cell === null }]"
+  v-html="playerHtmlEntity(cell)"
+  @click="client?.moves.markCell(index)"
+></div>
+```
