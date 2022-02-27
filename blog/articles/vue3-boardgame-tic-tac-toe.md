@@ -269,4 +269,4 @@ There are two things I'd like to explain before we move on to styling. First one
 
 The second one is the use of built-in `v-html` directive, instead of the good ol' mustache syntax. If we were to make use of the latter, each HTML entity string returned by our utility would be displayed *as-is* instead of getting *converted* to a proper Unicode character. Furthermore, utilising `v-html` in this scenario is totally safe, because it's impossible for the user to set a custom cell value, and even if it was, the `playerHtmlEntity` would simply return `undefined` due to such value not being a key of `entityMap`.
 
-With that out of the way, it's time to style our board. Start by adding `id="tic-tac-toe-board"` to the root div in the `<template>` and putting a `<style scoped>` element right below said template.
+# ADD STYLING SECTION HERE
