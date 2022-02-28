@@ -4,10 +4,18 @@
         <title>Weekly OverVue RSS Feed</title>
         <link>https://weeklyovervue.com/articles</link>
         <description>RSS feed for the latest Weekly OverVue articles</description>
-        <lastBuildDate>Sat, 19 Feb 2022 09:08:03 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Feb 2022 21:15:17 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <copyright>2022 Weekly OverVue</copyright>
+        <item>
+            <title><![CDATA[The future of Weekly OverVue]]></title>
+            <link>https://weeklyovervue.com/articles/the-future-of-weekly-overvue.html</link>
+            <guid>the-future-of-weekly-overvue</guid>
+            <pubDate>Mon, 28 Feb 2022 22:04:00 GMT</pubDate>
+            <description><![CDATA[About a revised content delivery strategy, new name, and how you can help Ukraine by purchasing a domain name]]></description>
+            <enclosure url="https://weeklyovervue.com/images/javier-allegue-barros-c7b-exxpoie-unsplash.jpg" length="0" type="image/jpg"/>
+        </item>
         <item>
             <title><![CDATA[Operation "Netlify CMS" complete]]></title>
             <link>https://weeklyovervue.com/articles/operation-netlify-cms-complete.html</link>
