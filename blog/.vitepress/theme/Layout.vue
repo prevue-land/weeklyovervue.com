@@ -25,12 +25,12 @@ const articleDisplayDate = computed(() =>
       </section>
     </template>
   </Layout>
-  <template v-if="frontmatter.home">
+  <!-- <template v-if="frontmatter.home">
     <TheLatestArticles />
     <NewsletterSignup />
   </template>
   <footer>
-    &copy; {{ currentYear }} Weekly OverVue. Powered by
+    &copy; {{ currentYear }} PreVue Land. Powered by
     <a
       id="vitepress-link"
       href="https://vitepress.vuejs.org"
@@ -39,7 +39,7 @@ const articleDisplayDate = computed(() =>
     >
       Vitepress
     </a>
-  </footer>
+  </footer> -->
 </template>
 
 <style scoped>

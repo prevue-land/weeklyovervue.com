@@ -13,11 +13,11 @@ jobs:
       - name: Install packages
         run: npm ci
 
-      - name: Generate articles.json
-        run: npm run gen-articles-json
+      # - name: Generate articles.json
+      #   run: npm run gen-articles-json
 
-      - name: Generate RSS feed
-        run: npm run gen-rss-feed
+      # - name: Generate RSS feed
+      #   run: npm run gen-rss-feed
 
       - name: Build
         run: npm run build
